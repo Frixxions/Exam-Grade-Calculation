@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class main {
+
+    public static void main(String[] args) {
+
+        int Vize , Quiz , Final;
+        Scanner skn = new Scanner(System.in);
+        
+        System.out.print("Enter Your Quiz Grade: ");
+        Quiz = skn.nextInt();
+
+       System.out.print("Enter Your Visa Grade: ");
+       Vize = skn.nextInt();
+       
+       System.out.print("Enter Your Final Grade: ");
+       Final = skn.nextInt();
+int toplamNot = Quiz + Vize + Final;
+int Sonuc = toplamNot / 3;
+
+        if(Sonuc > 500) {
+            System.out.println(toplamNot + "Geçersiz! 500'ü Geçmemeli.");
+        }
+        else if(Sonuc < 0) {
+            System.out.println(Sonuc + " NE DEMEK LA NEGATİF AMK");
+        }
+         else {
+
+        System.out.println("Your Total Grade: " + Sonuc);
+        }
+        if(Sonuc >= 450) {
+            System.out.println("A VERY NICE GRADE! KEEP IT UP!");
+        }
+        else if(Sonuc >= 350) {
+            System.out.println("Really Beatiful!");
+        }
+        else if(Sonuc >= 200) {
+            System.out.println("Nice! At least you passed the exam!");
+        }
+        else if(Sonuc < 200) {
+            System.out.println("Failed! You are left.\nTry again next time :( :(");
+        }
+
+    }
+}
